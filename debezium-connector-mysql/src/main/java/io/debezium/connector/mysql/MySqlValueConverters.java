@@ -14,10 +14,7 @@ import java.nio.charset.IllegalCharsetNameException;
 import java.nio.charset.StandardCharsets;
 import java.sql.Timestamp;
 import java.sql.Types;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
+import java.time.*;
 import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
@@ -154,7 +151,7 @@ public class MySqlValueConverters extends JdbcValueConverters {
     public MySqlValueConverters(DecimalMode decimalMode, TemporalPrecisionMode temporalPrecisionMode, BigIntUnsignedMode bigIntUnsignedMode,
                                 BinaryHandlingMode binaryMode,
                                 TemporalAdjuster adjuster, ParsingErrorHandler parsingErrorHandler) {
-        super(decimalMode, temporalPrecisionMode, ZoneOffset.UTC, adjuster, bigIntUnsignedMode, binaryMode);
+        super(decimalMode, temporalPrecisionMode, ZoneOffset.systemDefault().getRules().getOffset(LocalDateTime.now()), adjuster, bigIntUnsignedMode, binaryMode);
         this.parsingErrorHandler = parsingErrorHandler;
     }
 
