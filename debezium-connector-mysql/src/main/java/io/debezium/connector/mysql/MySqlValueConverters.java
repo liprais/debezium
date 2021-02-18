@@ -22,6 +22,7 @@ import java.time.temporal.ChronoField;
 import java.time.temporal.ChronoUnit;
 import java.time.temporal.Temporal;
 import java.time.temporal.TemporalAdjuster;
+import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -154,7 +155,11 @@ public class MySqlValueConverters extends JdbcValueConverters {
     public MySqlValueConverters(DecimalMode decimalMode, TemporalPrecisionMode temporalPrecisionMode, BigIntUnsignedMode bigIntUnsignedMode,
                                 BinaryHandlingMode binaryMode,
                                 TemporalAdjuster adjuster, ParsingErrorHandler parsingErrorHandler) {
-        super(decimalMode, temporalPrecisionMode, ZoneOffset.UTC, adjuster, bigIntUnsignedMode, binaryMode);
+        //to use local machine's timezone:
+        //ZoneOffset.systemDefault().getRules().getOffset(Instant.now())
+        //from https://stackoverflow.com/questions/32626733/is-there-any-way-to-convert-zoneid-to-zoneoffset-in-java-8/32627141
+        super(decimalMode, temporalPrecisionMode,ZoneOffset.systemDefault().getRules().getOffset(Instant.now()), adjuster, bigIntUnsignedMode, binaryMode);
+        //super(decimalMode, temporalPrecisionMode, ZoneOffset.UTC, adjuster, bigIntUnsignedMode, binaryMode);
         this.parsingErrorHandler = parsingErrorHandler;
     }
 
