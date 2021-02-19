@@ -16,10 +16,10 @@
     <packaging>pom</packaging>
     <url>https://debezium.io</url>
     <scm>
-        <connection>scm:git:git@github.com:debezium/debezium.git</connection>
-        <developerConnection>scm:git:git@github.com:debezium/debezium.git</developerConnection>
-        <url>https://github.com/debezium/debezium</url>
-        <tag>v1.4.0.Final</tag>
+        <connection>scm:git:git@github.com:liprais/debezium.git</connection>
+        <developerConnection>scm:git:git@github.com:liprais/debezium.git</developerConnection>
+        <url>https://github.com/liprais/debezium</url>
+        <tag>v1.4.0.ubr</tag>
     </scm>
     <issueManagement>
         <system>jira</system>
