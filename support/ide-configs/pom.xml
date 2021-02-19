@@ -10,7 +10,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>io.debezium</groupId>
    <artifactId>debezium-ide-configs</artifactId>
-   <version>1.4.0.UBR.FIX</version>
+   <version>1.4.0.Final</version>
    <name>Debezium IDE Formatting Rules</name>
    <description>Contains the definitions for the Debezium commons code style and conventions applicable in formatter and IDEs</description>
 
@@ -39,6 +39,6 @@
     </build>
 
   <scm>
-    <tag>v1.4.0.UBR.FIX</tag>
+    <tag>v1.4.0.Final</tag>
   </scm>
 </project>

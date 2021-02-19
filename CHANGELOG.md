@@ -2,7 +2,7 @@
 
 All notable changes are documented in this file. Release numbers follow [Semantic Versioning](http://semver.org)
 
-## 1.4.0.UBR.FIX
+## 1.4.0.Final
 Januaryr 7th 2021 [Detailed release notes](https://issues.redhat.com/secure/ReleaseNote.jspa?projectId=12317320&version=12352766)
 
 ### New features since 1.4.0.CR1

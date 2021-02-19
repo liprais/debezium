@@ -3,8 +3,8 @@
     <parent>
         <groupId>io.debezium</groupId>
         <artifactId>debezium-parent</artifactId>
-        <version>1.4.0.UBR.FIX</version>
-        <relativePath>../pom.xml</relativePath>
+        <version>1.4.0.Final</version>
+        <relativePath>../</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>debezium-connector-postgres</artifactId>
