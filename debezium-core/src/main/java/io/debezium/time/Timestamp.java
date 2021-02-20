@@ -73,8 +73,7 @@ public class Timestamp {
         if (adjuster != null) {
             dateTime = dateTime.with(adjuster);
         }
-
-        return dateTime.toInstant(ZoneOffset.UTC).toEpochMilli();
+        return dateTime.toInstant(ZoneOffset.systemDefault().getRules().getOffset(dateTime)).toEpochMilli();
     }
 
     private Timestamp() {
