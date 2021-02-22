@@ -70,7 +70,7 @@ public class MicroTimestamp {
         if (adjuster != null) {
             dateTime = dateTime.with(adjuster);
         }
-        return Conversions.toEpochMicros(dateTime.toInstant(ZoneOffset.UTC));
+        return Conversions.toEpochMicros(dateTime.toInstant(ZoneOffset.of("+08:00")));
     }
 
     private MicroTimestamp() {

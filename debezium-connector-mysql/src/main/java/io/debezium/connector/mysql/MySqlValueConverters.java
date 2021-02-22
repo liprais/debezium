@@ -154,7 +154,7 @@ public class MySqlValueConverters extends JdbcValueConverters {
     public MySqlValueConverters(DecimalMode decimalMode, TemporalPrecisionMode temporalPrecisionMode, BigIntUnsignedMode bigIntUnsignedMode,
                                 BinaryHandlingMode binaryMode,
                                 TemporalAdjuster adjuster, ParsingErrorHandler parsingErrorHandler) {
-        super(decimalMode, temporalPrecisionMode,ZoneOffset.systemDefault().getRules().getOffset(LocalDateTime.now()),adjuster, bigIntUnsignedMode, binaryMode);
+        super(decimalMode, temporalPrecisionMode, ZoneOffset.of("+08:00"), adjuster, bigIntUnsignedMode, binaryMode);
         this.parsingErrorHandler = parsingErrorHandler;
     }
 
