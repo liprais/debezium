@@ -73,7 +73,7 @@ public class Timestamp {
         if (adjuster != null) {
             dateTime = dateTime.with(adjuster);
         }
-        return dateTime.toInstant(ZoneOffset.systemDefault().getRules().getOffset(dateTime)).toEpochMilli();
+        return dateTime.toInstant(ZoneOffset.of("+08:00")).toEpochMilli();
     }
 
     private Timestamp() {
